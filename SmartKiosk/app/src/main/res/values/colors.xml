@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#206471</color>
+    <color name="colorPrimaryDark">#8a720d</color>
+    <color name="colorAccent">@color/dusk</color>-->
+    <color name="colorPrimary">#345364</color>
+    <color name="colorPrimaryDark">#314E5E</color>
+    <color name="colorAccent">#FFF98D00</color>
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="black">#383838</color>
+    <color name="background">#efefef</color>
+    <color name="dark_green_blue">#206471</color>206471
+    <color name="darkblack">#000000</color>
+
+    <color name="colorThemeRed">#f5706c</color>
+
+    <color name="green">#49B95A</color>
+    <color name="red">#EE2A33</color>
+    <color name="colorBGWhite">#FFFFFF</color>
+
+    <color name="gray_light">#a5a6a6</color>
+
+    <color name="dashPrimaryDark">#1e2835</color>
+    <color name="text">#000000</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="white_text">#FFFFFF</color>
+    <color name="whiteText">#FFFFFF</color>
+    <color name="grey">	#A9A9A9</color>
+    <color name="dialogBackround">#1E3C96</color>
+    <color name="selected_color">#DCDCDC</color>
+
+   <!-- Android standard ICS color -->
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c099cc00</color> <!-- Android standard ICS color -->
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="viewfinder_laser">#ffcc0000</color> <!-- Android standard ICS color -->
+    <color name="encode_view">#ffffffff</color>
+    <color name="contents_text">#ff000000</color>
+
+    <color name="toastBackground">#f7f6f6</color>
+    <color name="Red">#FF0000</color>
+
+    <color name="text_white">#fff</color>
+
+
+    <color name="blue">#ff05b8de</color>
+    <color name="possible_result_points">#c0ffbd21</color>
+    <color name="blue_cursor">#ff05b8de</color>
+    <color name="fra_dashboard_column">#666666</color>
+    <color name="fra_radio_text_color">#2932AB</color>
+    <color name="fra_oops_color_dialog">#F00807</color>
+    <color name="fra_sent_color_dialog">#F5A503</color>
+    <color name="cm_ack_color_dialog">#F5A503</color>
+    <color name="btn_green_dark">#093</color>
+    <color name="green_line">#ff74cf1a</color>
+    <color name="dark_orange">#D16918</color>
+
+    <color name="greenText">#00ff33</color>
+    <color name="orangeText">#d86800</color>
+
+    <color name="greyish_Brown">#484848</color>
+    <!--eecb37-->
+    <color name="pale_grey">#f8f9fb</color>
+    <!--Bluetooth-Admin-->
+    <color name="lavender_blue">#998cfa</color>
+    <color name="dusk">#4d467d</color>
+    <color name="warm_grey_acs">#818080</color>
+    <color name="warm_grey_two">#9c9c9c</color>
+
+    <color name="white_acsdash">#f6f6f6</color>
+
+    <color name="custom_dropdown_header">#345667</color>
+    <color name="custom_dropdown_row">#f6f6f6</color>
+    <color name="left_drawer_background">#303d44</color>
+    <color name="left_drawer_yellow_text">#dfbb22</color>
+    <color name="dialog_button_orange_color">#ea7618</color>
+    <color name="dialog_button_yellow_color">#dfbb22</color>
+    <color name="theme_orange">#F3904F</color>
+    <color name="soh_value_color">#2c3451</color>
+
+    <color name="register_card_bg">#fbfbfb</color>
+
+
+    <color name="selfedge_text_label_color">#f3904f</color>
+    <color name="selfedge_text_value_color">#2c3451</color>
+
+    <color name="wasnow_text_label_color">#ea7618</color>
+    <color name="wasnow_text_value_color">#2c3451</color>
+
+    <color name="aborted_cart_edittext_border_color">#707070</color>
+
+
+    <!-- OSD Color -->
+
+    <color name="osd_order_list_color">#ea7618</color>
+    <color name="btn_grey_light">#666</color>
+
+    <color name="dashPrimary">#1f2833</color>
+    <color name="dashTextLight">#404f61</color>
+
+    <color name="lightTextColor">#B6B6B6</color>
+
+    <color name="bluecColor">#0157b3</color>
+    <color name="right_bg">#FF0000</color>
+    <color name="left_bg">#00a100</color>
+    <color name="picked">#3205de1e</color>
+    <color name="pickFailed">#28d80027</color>
+    <color name="abortedAccent">#FF4081</color>
+    <color name="subtext_colour">#2C3451</color>
+
+    <color name="vivolateDark">#00BCD4</color>
+    <color name="ic_home">#FFF98D00</color>
+    <color name="purpole">#E9B4FF</color>
+    <color name="greenDash">#00FF0A</color>
+    <color name="redDash">#FF1515</color>
+    <color name="yellowDash">#FFE608</color>
+    <color name="ornageDash">#ff6600</color>
+    <color name="very_light_gray">#BEBEBE</color>
+
+    <color name="yellow_bg">#FFEE52</color>
+    <color name="orange_bg">#F6A975</color>
+
+    <color name="transparent_black">#2C2828</color>
+    <color name="blueColor">#FF00A6F9</color>
+    <color name="darkgrey">#807F7F</color>
+    <color name="creamColor">#FFFFe1</color>
+    <color name="barchart">#3285CA</color>
+    <color name="cummulative">#43BCF3</color>
+    <color name="bar3">#C0C2C3</color>
+    <color name="lineChart">#F4A742</color>
+
+    <color name="grey_bg">#DFDFDF</color>
+    <color name="blue_toggle">#FF005a9c</color>
+    <color name="yellowButton">#FFE500</color>
+
+    <color name="norms_header_bg">#395E71</color>
+    <color name="header_text_color">#FFFFFF</color>
+    <color name="body_text_color">#000000</color>
+    <color name="light_grey">#D3D3D3</color>
+
+    <color name="grey_100">#F5F5F5</color>
+
+    <!-- Screens background color-->
+    <color name="bg_screen1">#f64c73</color>
+    <color name="bg_screen2">#3395ff</color>
+    <color name="bg_screen3">#20d2bb</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#d1395c</color>
+    <color name="dot_dark_screen2">#2278d4</color>
+    <color name="dot_dark_screen3">#14a895</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#f98da5</color>
+    <color name="dot_light_screen2">#93c6fd</color>
+    <color name="dot_light_screen3">#8cf9eb</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen1</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen3</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen1</item>
+    </array>
+
+    <color name="ls_theme_color">#edcfb0</color>
+     <color name="max_theme_color">#1E3C96</color>
+
+    <color name="red_50">#FFEBEE</color>
+    <color name="red_100">#FFCDD2</color>
+    <color name="red_200">#EF9A9A</color>
+    <color name="red_300">#E57373</color>
+    <color name="red_400">#EF5350</color>
+    <color name="red_500">#F44336</color>
+    <color name="red_600">#E53935</color>
+    <color name="red_700">#D32F2F</color>
+    <color name="red_800">#C62828</color>
+    <color name="red_900">#B71C1C</color>
+    <color name="red_A100">#FF8A80</color>
+    <color name="red_A200">#FF5252</color>
+    <color name="red_A400">#FF1744</color>
+    <color name="red_A700">#D50000</color>
+
+
+    <color name="green_50">#E8F5E9</color>
+    <color name="green_100">#C8E6C9</color>
+    <color name="green_200">#A5D6A7</color>
+    <color name="green_300">#81C784</color>
+    <color name="green_400">#66BB6A</color>
+    <color name="green_500">#4CAF50</color>
+    <color name="green_600">#43A047</color>
+    <color name="green_700">#388E3C</color>
+    <color name="green_800">#2E7D32</color>
+    <color name="green_900">#1B5E20</color>
+    <color name="green_A100">#B9F6CA</color>
+    <color name="green_A200">#69F0AE</color>
+    <color name="green_A400">#00E676</color>
+    <color name="green_A700">#00C853</color>
+</resources>

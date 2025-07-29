@@ -1,0 +1,80 @@
+<layout>
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        style="@style/Widget.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@drawable/toolbar_bg"
+        android:gravity="center"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:theme="@style/MyToolBar">
+
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:id="@+id/btnHome"
+            android:visibility="gone"
+            android:src="@drawable/ic_home"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/toolbarEdittext"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/lato_regular"
+                android:gravity="center"
+                android:hint="Enter Item Barcode"
+                android:imeOptions="actionSearch"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/white"
+                android:textColorHint="#F0EAEA"
+                android:textCursorDrawable="@null"
+                android:theme="@style/MyEditTextTheme"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvToolBarTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:text=" "
+                android:singleLine="true"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp" />
+
+            <TextView
+                android:id="@+id/tvToolBarSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/lato_regular"
+                android:gravity="center"
+                android:text=""
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp" />
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+</layout>

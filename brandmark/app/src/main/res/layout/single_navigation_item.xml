@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="navig"
+            type="com.lifestyle.retail_dashboard.view.homescreen.model.Usecase" />
+
+        <variable
+            name="onItemClick"
+            type="com.lifestyle.retail_dashboard.view.homescreen.model.Usecase.ItemClickListner" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{(v)->onItemClick.onItemClick(v,navig.name)}"
+        android:layout_margin="@dimen/_8sdp">
+        <!--android:onClick="@{()-> clickListner.onItemClick(navig.name)}">-->
+
+
+        <ImageView
+            android:id="@+id/navigIcon"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:scaleType="centerInside"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:text="@{navig.name}"
+            android:id="@+id/navigText"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintLeft_toRightOf="@+id/navigIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

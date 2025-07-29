@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="employee"
+            type="com.lifestyle.retail_dashboard.view.attendance.model.EmployeeDetail" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_3sdp"
+        app:cardCornerRadius="@dimen/_6sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:id="@+id/tvName"
+                    android:text="@{employee.fName+` `+(employee.lName == null ? `` : employee.lName)}"
+                    android:textSize="@dimen/_14sdp"
+                    android:textColor="@color/text"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:gravity="center"
+                    android:id="@+id/tvDesig"
+                    android:text="@{employee.mobileNum}"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:textColor="@color/text"
+                    app:layout_constraintTop_toBottomOf="@+id/tvName"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnCall"
+                    app:layout_constraintTop_toBottomOf="@+id/tvName"
+                    app:layout_constraintRight_toLeftOf="@+id/btnVideoCall"
+                    app:srcCompat="@drawable/ic_call"/>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnVideoCall"
+                    app:layout_constraintTop_toBottomOf="@+id/tvName"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    app:srcCompat="@drawable/ic_vido_call"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:id="@+id/tvStore"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:text="@{employee.locNm}"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/text"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDesig"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time In:"
+                    android:id="@+id/tvInLbl"
+                    android:textSize="@dimen/_13sdp"
+                    android:visibility="gone"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDesig"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{employee.empId}"
+                    android:id="@+id/tvTimeIn"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/text"
+                    app:layout_constraintTop_toTopOf="@+id/tvInLbl"
+                    app:layout_constraintLeft_toRightOf="@+id/tvInLbl"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    app:layout_constraintTop_toTopOf="@+id/tvInLbl"
+                    android:id="@+id/centerView"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time Out:"
+                    android:id="@+id/tvOutLbl"
+                    android:textSize="@dimen/_13sdp"
+                    android:visibility="gone"
+                    android:textColor="@color/colorAccent"
+                    app:layout_constraintTop_toTopOf="@+id/tvInLbl"
+                    app:layout_constraintLeft_toRightOf="@+id/centerView"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{employee.empId}"
+                    android:id="@+id/tvTimeOut"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/text"
+                    app:layout_constraintTop_toTopOf="@+id/tvInLbl"
+                    app:layout_constraintLeft_toRightOf="@+id/tvOutLbl"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!--<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_3sdp"
+        app:cardCornerRadius="@dimen/_6sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/tvStatus">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:id="@+id/tvName"
+                    android:text="@{employee.fName+` `+employee.lName}"
+                    android:textSize="@dimen/_14sdp"
+                    android:textColor="@color/text"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:id="@+id/tvDesig"
+                    android:text="@{employee.employeeDesignation}"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/text"
+                    app:layout_constraintTop_toBottomOf="@+id/tvName"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time In:"
+                    android:id="@+id/tvInLbl"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDesig"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{employee.checkInTime}"
+                    android:id="@+id/tvTimeIn"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/text"
+                    app:layout_constraintTop_toTopOf="@+id/tvInLbl"
+                    app:layout_constraintLeft_toRightOf="@+id/tvInLbl"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    app:layout_constraintTop_toTopOf="@+id/tvInLbl"
+                    android:id="@+id/centerView"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time Out:"
+                    android:id="@+id/tvOutLbl"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/colorAccent"
+                    app:layout_constraintTop_toTopOf="@+id/tvInLbl"
+                    app:layout_constraintLeft_toRightOf="@+id/centerView"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{employee.checkOutTime}"
+                    android:id="@+id/tvTimeOut"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/text"
+                    app:layout_constraintTop_toTopOf="@+id/tvInLbl"
+                    app:layout_constraintLeft_toRightOf="@+id/tvOutLbl"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="@{employee.status}"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp"
+                android:gravity="center"
+                android:padding="@dimen/_12sdp"
+                android:id="@+id/tvStatus"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@{employee.status.equalsIgnoreCase(`P`)  ? @color/green : @color/red}"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>-->
+</layout>

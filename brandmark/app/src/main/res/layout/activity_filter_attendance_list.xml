@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@drawable/main_bg">
+
+        <include
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/toolbar_layout"
+            layout="@layout/toolbar_layout"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/leftRecyclerview"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_layout"
+            app:layout_constraintBottom_toTopOf="@+id/btnLayout"
+            android:background="@color/grey_bg"/>
+
+
+        <View
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="0dp"
+            android:background="@color/grey_bg"
+            android:id="@+id/view"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_layout"
+            app:layout_constraintBottom_toTopOf="@+id/btnLayout"
+            app:layout_constraintLeft_toRightOf="@+id/leftRecyclerview"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_layout"
+            android:text="Choose Brand"
+            android:id="@+id/tvLbl"
+            android:padding="@dimen/_8sdp"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/darkgrey"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/rightRecyclerview"
+            app:layout_constraintLeft_toRightOf="@+id/view"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLbl"
+            app:layout_constraintBottom_toTopOf="@+id/btnLayout"
+            android:padding="@dimen/_6sdp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvNoData"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/darkgrey"
+            android:text="No Data Found"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@+id/view"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLbl"
+            app:layout_constraintBottom_toTopOf="@+id/btnLayout"
+            android:padding="@dimen/_6sdp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp"
+            android:id="@+id/btnLayout"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_white_border"
+                android:text="Clear"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textColor="@color/text"
+                android:textSize="@dimen/_14sdp"
+                android:id="@+id/btnClear"
+                app:layout_constraintRight_toLeftOf="@+id/centerView"/>
+
+            <View
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="1dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/centerView"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button"
+                android:text="Apply"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:id="@+id/btnApply"
+                app:layout_constraintLeft_toRightOf="@+id/centerView"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

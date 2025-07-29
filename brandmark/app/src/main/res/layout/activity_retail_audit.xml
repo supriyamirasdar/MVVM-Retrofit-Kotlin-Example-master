@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bg"
+        android:orientation="vertical"
+        tools:context=".view.brandmark.RetailAuditActivity">
+
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/toolbar_layout" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="2">
+
+                        <Spinner
+                            android:id="@+id/regionSP"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_border"
+                            android:padding="@dimen/_10sdp"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black" />
+
+                        <Spinner
+                            android:id="@+id/citySP"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_border"
+                            android:padding="@dimen/_10sdp"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <EditText
+                            android:id="@+id/storenameET"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center"
+                            android:hint="Store name"
+                            android:inputType="text"
+                            android:maxLength="30"
+                            android:padding="@dimen/_8sdp"
+                            android:textColor="@android:color/black"
+                            android:visibility="gone" />
+
+                        <Spinner
+                            android:id="@+id/storeNameSP"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_border"
+                            android:padding="@dimen/_10sdp"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black" />
+
+                        <LinearLayout
+                            android:id="@+id/auditDateLL"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_border"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_17sdp"
+                                android:layout_height="@dimen/_17sdp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:background="@drawable/calendar" />
+
+                            <TextView
+                                android:id="@+id/auditDateTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:hint="Audit Date "
+                                android:padding="@dimen/_8sdp"
+                                android:textColor="@android:color/black"
+                                android:textColorHint="@android:color/black"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <Spinner
+                            android:id="@+id/conceptSP"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_border"
+                            android:padding="@dimen/_10sdp"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black" />
+
+                        <EditText
+                            android:id="@+id/brandNameET"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center"
+                            android:hint="LMEB Brand"
+                            android:inputType="text"
+                            android:maxLength="30"
+                            android:padding="@dimen/_8sdp"
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <EditText
+                            android:id="@+id/managerNameET"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center"
+                            android:hint="Manager name"
+                            android:inputType="text"
+                            android:maxLength="30"
+                            android:padding="@dimen/_8sdp"
+                            android:textColor="@android:color/black" />
+
+                        <EditText
+                            android:id="@+id/auditBynameET"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center"
+                            android:hint="Audit By"
+                            android:inputType="text"
+                            android:maxLength="30"
+                            android:padding="@dimen/_8sdp"
+                            android:textColor="@android:color/black" />
+
+                        <Spinner
+                            android:id="@+id/doAuditSP"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_border"
+                            android:padding="@dimen/_10sdp"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/displayStandardTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey_bg"
+                    android:gravity="left"
+                    android:padding="@dimen/_6sdp"
+                    android:layout_margin="@dimen/_6sdp"
+                    android:text="DISPLAY STANDARDS"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/displayStandardLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/displayStandardRV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/businessCMTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey_bg"
+                    android:gravity="left"
+                    android:padding="@dimen/_6sdp"
+                    android:layout_margin="@dimen/_6sdp"
+                    android:text="BUSINESS - CM"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/businessCMLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/businessCMRV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/backstoreTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey_bg"
+                    android:gravity="left"
+                    android:padding="@dimen/_6sdp"
+                    android:layout_margin="@dimen/_6sdp"
+                    android:text="BACKSTORE (Only in case of Footwear)"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/backstoreLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/backstoreRV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+                    android:id="@+id/btnSubmit"
+                    android:background="@drawable/round_button"
+                    android:textSize="@dimen/_14sdp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

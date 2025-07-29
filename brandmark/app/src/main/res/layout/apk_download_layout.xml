@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Downloading new version of BrandMark"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/text"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:id="@+id/progressBar"
+        android:min="0"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:max="100"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_4sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:id="@+id/tvPercentage"
+            android:textSize="@dimen/_13sdp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0/100"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/text"
+            android:id="@+id/tvdownload"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_10">10dp</dimen>
+
+    <dimen name="margin_6">6dp</dimen>
+
+    <!--Animation Duration-->
+    <integer name="duration">400</integer>
+    <integer name="zoom_duration">800</integer>
+
+
+    <!--Navigation ic_drawer-->
+
+
+    <dimen name="ios_text_size">@dimen/_12sdp</dimen>
+    <dimen name="ios_padding_right">@dimen/_12sdp</dimen>
+</resources>

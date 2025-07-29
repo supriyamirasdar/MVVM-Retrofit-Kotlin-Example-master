@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "934771195666",
+    "firebase_url": "https://stylus-433e4.firebaseio.com",
+    "project_id": "stylus-433e4",
+    "storage_bucket": "stylus-433e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934771195666:android:c56954227981faaa",
+        "android_client_info": {
+          "package_name": "com.lifestyle.retail_dashboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934771195666-f0ht95b7a6c41thlh88047iu72sgkpbd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lifestyle.retail_dashboard",
+            "certificate_hash": "50b8ff98bfe286445230bed5deae87c2cd68fac6"
+          }
+        },
+        {
+          "client_id": "934771195666-qvj70upuktm5duq5r9jq7pcsbbcfurrh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcfC-4MscMYuE2v0lz3hNTmzA36WnvM9c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934771195666-qvj70upuktm5duq5r9jq7pcsbbcfurrh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

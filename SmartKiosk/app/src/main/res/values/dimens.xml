@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+
+    <dimen name="margin_60">60dp</dimen>
+    <dimen name="margin_6">6dp</dimen>
+    <dimen name="margin_4">4dp</dimen>
+
+    <!--Animation Duration-->
+    <integer name="duration">400</integer>
+    <integer name="zoom_duration">800</integer>
+    <integer name="mobile_number_length">7</integer>
+
+
+    <!--Navigation ic_drawer-->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <dimen name="Item_description_value_20">@dimen/_20sdp</dimen>
+
+    <dimen name="mainscreen_overall_pad">5dp</dimen>
+    <dimen name="list_view_height">200dp</dimen>
+    <dimen name="standard_padding">8dip</dimen>
+    <dimen name="half_padding">4dip</dimen>
+    <dimen name="Item_description">15sp</dimen>
+
+    <dimen name="Item_description_value">14sp</dimen>
+    <dimen name="Item_was_now_description">15sp</dimen>
+    <dimen name="Item_was_now_description_value">22sp</dimen>
+    <dimen name="dashboard_fr_no_size">18sp</dimen>
+
+    <dimen name="left_drawer_width">@dimen/_200sdp</dimen>
+    <dimen name="text">15sp</dimen>
+    <dimen name="left_drawer_left_padding">@dimen/_16sdp</dimen>
+    <dimen name="left_drawer_icon_text_margin">@dimen/_14sdp</dimen>
+    <dimen name="left_drawer_text_size">@dimen/_14sdp</dimen>
+    <dimen name="left_drawer_logo_width">@dimen/_120sdp</dimen>
+    <dimen name="left_drawer_logo_height">@dimen/_80sdp</dimen>
+
+
+    <dimen name="ios_text_size">@dimen/_12sdp</dimen>
+    <dimen name="ios_padding_right">@dimen/_12sdp</dimen>
+    <dimen name="ios_padding_right_new_rford">@dimen/_25sdp</dimen>
+    <dimen name="left_drawer_icon_size">@dimen/_20sdp</dimen>
+    <dimen name="radio_button_height">@dimen/_43sdp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+
+    <dimen name="dots_height">30dp</dimen>
+    <dimen name="dots_margin_bottom">20dp</dimen>
+    <dimen name="img_width_height">80dp</dimen>
+    <dimen name="slide_title">30dp</dimen>
+    <dimen name="slide_desc">16dp</dimen>
+</resources>

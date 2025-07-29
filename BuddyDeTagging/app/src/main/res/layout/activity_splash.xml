@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/toolbar_bg">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="@dimen/_264sdp"
+            android:layout_height="@dimen/_61sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_40sdp" android:visibility="gone"
+            android:background="@drawable/ic_landmarkgroup_logo"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="@dimen/_240sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/ic_landmarkgroup_logo"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BrandMark"
+            android:visibility="gone"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_28sdp"
+            android:layout_centerInParent="true" />
+
+        <RelativeLayout
+            android:id="@+id/rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/all_brand"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_box"
+    android:minWidth="@dimen/_500sdp"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:gravity="center"
+            app:srcCompat="@drawable/ic_go_home" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="@dimen/_6sdp"
+            android:singleLine="true"
+            android:text="Changes will not be saved"
+            android:textAllCaps="true"
+            android:textColor="@color/white_text"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+
+        <Button
+            android:id="@+id/btnNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/_4sdp"
+            android:layout_toLeftOf="@+id/centerView"
+            android:layout_weight="1"
+            android:background="@drawable/square_button"
+            android:padding="@dimen/_6sdp"
+            android:text="GO TO HOME"
+            android:textAllCaps="true"
+            android:textColor="@color/text"
+            android:textSize="@dimen/_14sdp" />
+
+        <Button
+            android:id="@+id/btnYes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:layout_toRightOf="@+id/centerView"
+            android:layout_weight="1"
+            android:background="@drawable/square_button"
+            android:padding="@dimen/_6sdp"
+            android:singleLine="true"
+            android:text="Continue shopping"
+            android:textAllCaps="true"
+            android:textColor="@color/text"
+            android:textSize="@dimen/_14sdp" />
+
+    </LinearLayout>
+</LinearLayout>

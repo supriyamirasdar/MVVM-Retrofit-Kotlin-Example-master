@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_dialog"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/comman_toolbar_background"
+        android:padding="@dimen/margin_12">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:text="Select Option"
+            android:textStyle="bold"
+
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/dialog_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layoutDirection="rtl"
+            android:background="@drawable/border_dialog_edittext"
+            android:layout_margin="@dimen/_10sdp"
+            >
+                <RadioButton
+                    android:layout_margin="10dp"
+                    android:id="@+id/rb1"
+                    android:checked="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Back Camera"
+                    android:padding="12dp"
+                    style="@style/MyRadioButtonStyle"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                  />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dee6e6e6"/>
+
+                <RadioButton
+                    android:layout_margin="10dp"
+                    android:id="@+id/rb2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyRadioButtonStyle"
+                    android:padding="12dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:text="Front Camera"/>
+
+        </RadioGroup>
+
+    <Button
+        android:id="@+id/dialog_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_margin="15dp"
+        android:textSize="18sp"
+        android:text="DONE"
+        android:background="@drawable/settings_stores_add_more_button"/>
+</LinearLayout>

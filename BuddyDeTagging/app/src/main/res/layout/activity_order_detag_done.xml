@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeff5"
+        android:orientation="vertical"
+        tools:context=".view.detagging.OrderDetagDoneActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar_top"
+                layout="@layout/toolbar_layout" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_check_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_5sdp"
+
+                    android:gravity="center"
+                    android:text="Order De-Tagged Successfully"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+
+                <TextView android:id="@+id/orderidvalTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:text="Order ID #23456342 has been processed."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="normal"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:gravity="center"
+                    android:text="Thank you for shopping with MAX."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="normal"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:text="Have a great day!"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="normal"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+            <TextView android:id="@+id/moveToHomeBT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_60sdp"
+                android:background="@drawable/round_white_border"
+                android:gravity="center"
+                android:paddingLeft="@dimen/_40sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingRight="@dimen/_40sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:text="Home "
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="normal"
+                android:visibility="visible" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

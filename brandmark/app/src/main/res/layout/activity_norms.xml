@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bg"
+        android:orientation="vertical"
+        tools:context=".view.inventory_managment.activity.NormsActivity">
+
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/toolbar_layout" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/centerView"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="1dp"
+                android:layout_centerInParent="true" />
+
+            <Spinner
+                android:id="@+id/spNorms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/centerView" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/normsTimeLineHeaderLL"
+                android:layout_width="@dimen/_260sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:background="@color/norms_header_bg"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="@dimen/_260sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@drawable/norms_header_line"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/norms_header_line"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="Phase"
+                            android:textColor="@color/header_text_color"
+                            android:textSize="@dimen/_14sdp"
+                            android:textStyle="normal" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_25sdp"
+                            android:background="@drawable/norms_header_line"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="Time Line"
+                            android:textColor="@color/header_text_color"
+                            android:textSize="@dimen/_14sdp"
+                            android:textStyle="normal" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_25sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/_60sdp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/norms_header_line"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="SS"
+                                android:textColor="@color/header_text_color"
+                                android:textSize="@dimen/_14sdp"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:layout_width="@dimen/_60sdp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/norms_header_line"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="AW"
+                                android:textColor="@color/header_text_color"
+                                android:textSize="@dimen/_14sdp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/norms_header_line"
+                            android:gravity="center"
+
+                            android:text="Store Grade"
+                            android:textColor="@color/header_text_color"
+                            android:textSize="@dimen/_14sdp"
+                            android:textStyle="normal" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollHeaderView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/normsOverallFillrateHeaderLL"
+                        android:layout_width="@dimen/_360sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:background="@color/norms_header_bg"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_360sdp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/norms_header_line"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_25sdp"
+                                android:background="@drawable/norms_header_line"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="Over All Fill Rate"
+                                android:textColor="@color/header_text_color"
+                                android:textSize="@dimen/_14sdp"
+                                android:textStyle="normal" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_25sdp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="@dimen/_60sdp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/norms_header_line"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="APM"
+                                    android:textColor="@color/header_text_color"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="@dimen/_60sdp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/norms_header_line"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="APL EW"
+                                    android:textColor="@color/header_text_color"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="@dimen/_60sdp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/norms_header_line"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="APL WW"
+                                    android:textColor="@color/header_text_color"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="@dimen/_60sdp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/norms_header_line"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="APC"
+                                    android:textColor="@color/header_text_color"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="@dimen/_60sdp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/norms_header_line"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="FW"
+                                    android:textColor="@color/header_text_color"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="@dimen/_60sdp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/norms_header_line"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="T&amp;A"
+                                    android:textColor="@color/header_text_color"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="normal" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/normsFreshnessHeaderLL"
+                        android:layout_width="@dimen/_360sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:background="@color/norms_header_bg"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_360sdp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/norms_header_line"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_25sdp"
+                                android:background="@drawable/norms_header_line"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="Freshness (Season+Core)"
+                                android:textColor="@color/header_text_color"
+                                android:textSize="@dimen/_14sdp"
+                                android:textStyle="normal" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_25sdp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="@dimen/_60sdp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/norms_header_line"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="APM"
+                                    android:textColor="@color/header_text_color"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="@dimen/_60sdp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/norms_header_line"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="APL EW"
+                                    android:textColor="@color/header_text_color"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="@dimen/_60sdp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/norms_header_line"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="APL WW"
+                                    android:textColor="@color/header_text_color"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="@dimen/_60sdp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/norms_header_line"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="APC"
+                                    android:textColor="@color/header_text_color"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="@dimen/_60sdp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/norms_header_line"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="FW"
+                                    android:textColor="@color/header_text_color"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="@dimen/_60sdp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/norms_header_line"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="T&amp;A"
+                                    android:textColor="@color/header_text_color"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="normal" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/normsBrokenFreshnessHeaderLL"
+                        android:layout_width="@dimen/_360sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:background="@color/norms_header_bg"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_360sdp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/norms_header_line"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_25sdp"
+                                android:background="@drawable/norms_header_line"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="Broken of Fresh/Non Discounted Stocks"
+                                android:textColor="@color/header_text_color"
+                                android:textSize="@dimen/_14sdp"
+                                android:textStyle="normal" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_25sdp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="@dimen/_60sdp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/norms_header_line"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="APM"
+                                    android:textColor="@color/header_text_color"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="@dimen/_60sdp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/norms_header_line"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="APL EW"
+                                    android:textColor="@color/header_text_color"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="@dimen/_60sdp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/norms_header_line"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="APL WW"
+                                    android:textColor="@color/header_text_color"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="@dimen/_60sdp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/norms_header_line"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="APC"
+                                    android:textColor="@color/header_text_color"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="@dimen/_60sdp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/norms_header_line"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="FW"
+                                    android:textColor="@color/header_text_color"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="@dimen/_60sdp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/norms_header_line"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="T&amp;A"
+                                    android:textColor="@color/header_text_color"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="normal" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_10sdp">
+
+                <include
+                    android:id="@+id/normsTimeLineLL"
+                    layout="@layout/layout_norms_time_line" />
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/normsOverallFillrateLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <include layout="@layout/layout_norms_overall_fill_rate" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/normsFreshnessLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <include layout="@layout/layout_norms_freshness" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/normsBrokenFreshnessLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <include layout="@layout/layout_norms_brokenof_fresh" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</layout>

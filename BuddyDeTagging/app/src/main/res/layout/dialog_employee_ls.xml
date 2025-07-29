@@ -1,0 +1,86 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="@dimen/_220sdp"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_16sdp"
+    android:background="@drawable/ls_white_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Enter Employee Id"
+            android:layout_margin="@dimen/_6sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter Employee Id"
+            android:textColor="@color/text"
+            android:textSize="@dimen/_14sdp"
+            android:drawableLeft="@drawable/ic_crm"
+            android:textStyle="bold"
+            android:inputType="textCapCharacters|textVisiblePassword|textNoSuggestions"
+            android:importantForAutofill="no"
+            android:id="@+id/etEmployeeCode"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+            android:background="@drawable/edittext_ls"
+            android:padding="@dimen/_6sdp"
+            android:maxLength="11"
+            android:drawablePadding="@dimen/_6sdp"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_16sdp">
+
+        <View
+            android:layout_width="@dimen/_8sdp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/centerView"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textAllCaps="true"
+            android:textColor="@color/text"
+            android:padding="@dimen/_6sdp"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_14sdp"
+            android:id="@+id/btnYes"
+            android:background="@drawable/square_button_ls"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/centerView"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textAllCaps="true"
+            android:textColor="@color/text"
+            android:padding="@dimen/_6sdp"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_14sdp"
+            android:layout_weight="1"
+            android:background="@drawable/square_button_ls"
+            android:id="@+id/btnNo"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/centerView"/>
+    </RelativeLayout>
+</LinearLayout>

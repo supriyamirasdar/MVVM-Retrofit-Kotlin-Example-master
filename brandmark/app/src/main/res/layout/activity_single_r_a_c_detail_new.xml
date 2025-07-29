@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="retailAudit"
+            type="com.lifestyle.retail_dashboard.view.retail_audit_checklist.model.GetRACList" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".view.retail_audit_checklist.activity.SingleRACDetail">
+
+            <include
+                android:id="@+id/toolbar_layout"
+                layout="@layout/toolbar_layout"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/main_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar_layout">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/tvRacNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{retailAudit.racNo}"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/_14sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/tvRegion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:text="@{retailAudit.rgnName}"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/_14sdp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvRacNo" />
+
+
+                    <TextView
+                        android:id="@+id/tvStore"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:text="@{retailAudit.whStoreName}"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/_14sdp"
+
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvRegion" />
+
+
+                    <TextView
+                        android:id="@+id/tvBrandName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:text="@{retailAudit.brndDesc}"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/_14sdp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvStore" />
+
+
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@{retailAudit.racStatus.equalsIgnoreCase(`Open`) ? @drawable/round_red_button : @drawable/round_green_button}"
+                        android:padding="@dimen/_4sdp"
+                        android:text="@{retailAudit.racStatus}"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14sdp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvRegion" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvRacNo">
+
+                        <TextView
+                            android:id="@+id/tvLbl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:text="Assign To:"
+                            android:textColor="@color/ic_home"
+                            android:textSize="@dimen/_14sdp" />
+
+
+                        <TextView
+                            android:id="@+id/tvAssignTo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:text="@{retailAudit.auditBy}"
+                            android:textColor="@color/text"
+                            android:textSize="@dimen/_14sdp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{retailAudit.auditDate}"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/_14sdp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/tvBrandName">
+
+
+                        <TextView
+                            android:id="@+id/LblDisplayStand"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@color/grey_bg"
+                            android:drawableRight="@drawable/ic_arrow_down_black"
+                            android:gravity="left"
+                            android:padding="@dimen/_6sdp"
+                            android:text="DISPLAY STANDARDS"
+                            android:textAllCaps="true"
+                            android:textColor="@color/text"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <LinearLayout
+                            android:id="@+id/rvDisplayStandart"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_2sdp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintTop_toBottomOf="@+id/LblDisplayStand">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/displayStandardRV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clipToPadding="false"
+                                android:scrollbars="none" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/LblBusinessCM"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@color/grey_bg"
+                            android:drawableRight="@drawable/ic_arrow_down_black"
+                            android:gravity="left"
+                            android:padding="@dimen/_6sdp"
+                            android:text="Staff"
+                            android:textAllCaps="true"
+                            android:textColor="@color/text"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            app:layout_constraintTop_toBottomOf="@+id/rvDisplayStandart" />
+
+
+                        <LinearLayout
+                            android:id="@+id/rvBusinessCM"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_2sdp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintTop_toBottomOf="@+id/LblBusinessCM">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/businessCMRV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clipToPadding="false"
+                                android:scrollbars="none" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/LblStaff"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@color/grey_bg"
+                            android:drawableRight="@drawable/ic_arrow_down_black"
+                            android:gravity="left"
+                            android:padding="@dimen/_6sdp"
+                            android:text="Business/Concept Manager"
+                            android:textAllCaps="true"
+                            android:textColor="@color/text"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            app:layout_constraintTop_toBottomOf="@+id/rvBusinessCM" />
+
+                        <LinearLayout
+                            android:id="@+id/rvBackStore"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_2sdp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintTop_toBottomOf="@+id/LblStaff">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/backstoreRV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clipToPadding="false"
+                                android:scrollbars="none" />
+                        </LinearLayout>
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <Button
+                        android:id="@+id/btnSubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_20sdp"
+                        android:background="@drawable/round_button"
+                        android:text="Submit"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14sdp"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/container" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_10sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/btnSubmit" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@drawable/round_white_border"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+            app:behavior_hideable="true"
+            app:behavior_peekHeight="0dp"
+            app:layout_behavior="@string/bottom_sheet_behavior">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filter By"
+                android:textColor="@color/text"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="Status"
+                android:textColor="@color/text"
+                android:textSize="@dimen/_14sdp" />
+
+            <RadioGroup
+                android:id="@+id/rgStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkedButton="@id/rbAll"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RadioButton
+                    android:id="@+id/rbAll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="All"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/_13sdp" />
+
+
+                <RadioButton
+                    android:id="@+id/rbOpen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Open"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/_13sdp" />
+
+
+                <RadioButton
+                    android:id="@+id/rbClose"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Closed"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/_13sdp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/lblFilterbyAssign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="Assign To"
+                android:textColor="@color/text"
+                android:textSize="@dimen/_14sdp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFilterByAssignTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

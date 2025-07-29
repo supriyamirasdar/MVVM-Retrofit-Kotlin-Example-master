@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bg"
+        tools:context=".view.planogram.activity.PlanogramActivity">
+
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/toolbar_layout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_layout">
+
+            <TextView
+                android:id="@+id/tvLbl1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Concept: "
+                android:textColor="@color/text"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/spBrands"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/spConcept"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@+id/tvLbl1"
+                app:layout_constraintTop_toTopOf="@+id/tvLbl1"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLbl1"/>
+
+            <TextView
+                android:id="@+id/tvLbl2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="Brand: "
+                android:textColor="@color/text"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spConcept" />
+
+            <Spinner
+                android:id="@+id/spBrand"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@+id/tvLbl1"
+                app:layout_constraintTop_toTopOf="@+id/tvLbl2"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLbl2"/>
+
+
+            <TextView
+                android:id="@+id/tvLbl3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="Season: "
+                android:textColor="@color/text"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spBrand" />
+
+            <Spinner
+                android:id="@+id/spSeason"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@+id/tvLbl1"
+                app:layout_constraintTop_toTopOf="@+id/tvLbl3"
+                app:layout_constraintBottom_toBottomOf="@id/tvLbl3"/>
+
+
+            <TextView
+                android:id="@+id/tvLbl4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="Hit: "
+                android:textColor="@color/text"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spSeason" />
+
+            <Spinner
+                android:id="@+id/spWeek"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@+id/tvLbl1"
+                app:layout_constraintTop_toTopOf="@+id/tvLbl4"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLbl4"/>
+
+            <TextView
+                android:id="@+id/tvLbl5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="Upload File"
+                android:textColor="@color/text"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spWeek" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:background="@drawable/dotted_linee"
+                android:gravity="center"
+                android:id="@+id/btnUpload"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/tvNote"
+                app:layout_constraintTop_toBottomOf="@+id/tvLbl5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="Upload File"
+                    android:drawableTop="@drawable/ic_upload"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    android:id="@+id/tv"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/_14sdp"
+                    android:id="@+id/tvFile"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv"/>
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/fileList"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/tv"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:text="Note: File size should be less then 5MB."
+                android:textColor="@color/red"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/round_button"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:layout_editor_absoluteX="21dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/homeScreenRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeff5"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar_top"
+            layout="@layout/toolbar_layout" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar_top"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:gravity="center_horizontal"
+                    android:text="Self checkout Buddy 2.0"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:gravity="center_horizontal"
+                    android:text="Scan Order QR Code "
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/scanOrderCodeIV"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_180sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    app:srcCompat="@drawable/scan_code" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/unableToScanTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:text="Unable to scan ?"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_20sdp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/iv_emp_id"
+                        android:layout_width="@dimen/_22sdp"
+                        android:layout_height="@dimen/_22sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_toRightOf="@+id/unableToScanTV"
+                        app:srcCompat="@drawable/ic_crm"
+                        app:tint="@color/text" />
+
+                    <ImageView
+                        android:id="@+id/iv_more_info"
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        app:srcCompat="@drawable/ic_info_new"
+                        app:tint="@color/grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/_8sdp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/searchTransMainLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/searchTransViewLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:text="Search Transaction"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sdp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <RadioGroup
+                            android:id="@+id/searchoptionRGB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_5sdp"
+
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.2"
+                                android:text="Mobile Number"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_14sdp" />
+
+                            <RadioButton
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Order Id"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_14sdp" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/orderIdViewLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:background="@drawable/edittext_border"
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/searchValTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:layout_weight="1.5"
+                            android:text="Order Id"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sdp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/searchValET"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:hint=""
+                            android:imeOptions="actionNext"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            android:singleLine="true"
+                            android:textColor="@color/text"
+                            android:textColorHint="#B5B8B8"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <TextView
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.3"
+                            android:gravity="center_horizontal"
+                            android:text="-"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sdp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/searchValTwoET"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:hint=""
+                            android:imeOptions="actionNext"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:singleLine="true"
+                            android:textColor="@color/text"
+                            android:textColorHint="#B5B8B8"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <TextView
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.3"
+                            android:gravity="center_horizontal"
+                            android:text="-"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sdp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/searchValThreeET"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:hint=""
+                            android:imeOptions="actionDone"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            android:singleLine="true"
+                            android:textColor="@color/text"
+                            android:textColorHint="#B5B8B8"
+                            android:textSize="@dimen/_13sdp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LytOrderIdForLifestyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:background="@drawable/edittext_border"
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/txtOrderIdforLifestyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:layout_weight="1.5"
+                            android:text="Order Id"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sdp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/orderIDValfORLifeStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:hint="Enter Order Id"
+                            android:imeOptions="actionDone"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:maxLength="14"
+                            android:textColor="@color/text"
+                            android:textColorHint="#B5B8B8"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/mobileNumViewLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:background="@drawable/edittext_border"
+                        android:padding="@dimen/_5sdp">
+
+                        <TextView
+                            android:id="@+id/mobileNumValTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:layout_weight="1.5"
+                            android:text="Mobile Number"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sdp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/mobileNumCodeTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+
+                            android:layout_weight="0.5"
+                            android:gravity="right"
+                            android:text="+91"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sdp"
+                            android:textStyle="normal"
+                            android:visibility="visible" />
+
+
+                        <EditText
+                            android:id="@+id/mobileNumValET"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:hint="Enter mobile number"
+                            android:imeOptions="actionDone"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:textColor="@color/text"
+                            android:textColorHint="#B5B8B8"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnsearchTrans"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginLeft="@dimen/_90sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_90sdp"
+                        android:background="@drawable/button_disable_bg"
+                        android:text="Proceed"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14sdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</layout>
